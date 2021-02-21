@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Freizeittipps</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+    <h1>Freizeittipps</h1>
+
+
+        <li>Tipp-Info</li>
+          <ul>
+            <li>Titel: {{ tipp.title }}</li>
+            <li>Beschreibung: {{ tipp.description }}</li>
+            <li>Geeignet für ein Alter von {{ tipp.age_from }} bis {{ tipp.age_to }} Jahren</li>
+            <li>Kategorie: </li>
+            <li>Tag_Taggit</li>
+            <li>Tag:</li>
+            <li>Adresse:
+              <ul>
+                <li>Strasse: </li>
+                <li>Stadt:</li>
+              </ul>
+            </li>
+            <li>Kontakt</li>
+              <ul>
+                  <li>Homepage:</li>
+                  <li>Telefon:</li>
+                  <li>E-Mail:</li>
+              </ul>
+
+            <li>Erstellt am {{ tipp.created }}</li>
+            <li>Zuletzt geändert am: {{ tipp.updated_current }}</li>
+          </ul>
+
+
+  </div>
+  </body>
+</html>

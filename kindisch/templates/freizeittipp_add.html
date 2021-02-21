@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Freizeittipp hinzufügen</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+        <div class="jumbotron">
+          <h1>Freizeittipp hinzufügen</h1>
+        </div>
+        <div class="">
+          <form class="" method="POST">
+            {{ form.as_p }}
+            {% csrf_token%}
+            <input type="submit" Class="btn btn-primary" value="Absenden">
+          </form>
+        </div>
+
+  </div>
+  </body>
+</html>

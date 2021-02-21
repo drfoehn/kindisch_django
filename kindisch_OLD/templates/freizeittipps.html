@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Freizeittipps</title>
+  </head>
+  <body>
+    <h1>Freizeittipps</h1>
+
+    {% if freizeittipps %}
+
+    <ol>
+      {% for tipp in freizeittipps %}
+        <li>Tipp-Info</li>
+          <ul>
+            <li>Titel: {{ tipp.title }}</li>
+            <li>Beschreibung: {{ tipp.description }}</li>
+            <li>Geeignet für ein Alter von {{ tipp.age_from }} bis {{ tipp.age_to }} Jahren</li>
+            <li>Erstellt am {{ tipp.created }}</li>
+            <li>Zuletzt geändert am: {{ tipp.updated_current }}</li>
+          </ul>
+      {% endfor %}
+    </ol>
+
+    {% endif %}
+  </body>
+</html>

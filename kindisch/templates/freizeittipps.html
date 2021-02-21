@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Freizeittipps</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
+  <body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Freizeittipps</h1>
+    </div>
+
+    <div class="">
+      Karte
+    </div>
+    <div class="">
+      Filter
+    </div>
+
+
+
+        {% if freizeittipps %}
+        <div class="row">
+          {% for tipp in freizeittipps %}
+
+              <div class="col col-md-4" style="border: 1px solid">
+                <li>Titel: {{ tipp.title }}</li>
+                  <ul>
+                    <li>Geeignet für ein Alter von {{ tipp.age_from }} bis {{ tipp.age_to }} Jahren</li>
+                    <li>Kategorie: {{ tipp.categories }}</li>
+                    <li>Tag_Taggit {{ tipp.tag_taggit }}</li>
+                    <li>Tag: {{ tipp.tag }}</li>
+                    <li><a href="#" class="btn btn-primary btn-md">Read more</a></li>
+                  </ul>
+                </div>
+
+          {% endfor %}
+        </div>
+        {% endif %}
+
+
+  </div>
+  </body>
+</html>
